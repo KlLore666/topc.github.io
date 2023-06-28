@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="scuro">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zelden Discord Bot - Home</title>
+
+  <meta name="google-site-verification" content="S38IBGbsuGpVjUPo3Rdn9ddglkHSyEJ-WtKZD3CAyMs" />
+  <meta property="og:url" content="https://zelden.repl.co" />
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:type" content="website">
+  <meta property='og:image'
+    content='https://cdn.discordapp.com/attachments/1065323447577747557/1096936706571239486/image-a3.png'>
+  <meta property="og:title" content="Costruisci il miglior server Discord con Zelden.">
+  <meta property="og:site_name" content="https://zelden.repl.co">
+  <meta property="og:description"
+    content="Costruisci il miglior server Discord con Zelden, un bot multifunzione con più di 100 comandi e funzioni. Migliora il tuo server utilizzando i sistemi di Ticket, Benvenuto e tanto altro ancora! Zelden ha i migliori comandi di moderazione che un bot possa avere, sono più di 25! Intrattieni i tuoi membri con i comandi divertimento e i minigiochi integrati. Invita Zelden ora e fai prendere vita al tuo server Discord.">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="icon" type="image/x-icon"
+    href="https://cdn.discordapp.com/attachments/1065323447577747557/1096936706571239486/image-a3.png">
+  <script src="js/scrollreveal.min.js"></script>
+  <script defer="" type="text/javascript" src="js/scrollveal.js"></script>
+  <script defer="" type="text/javascript" src="js/cursor.js"></script>
+</head>
+
+<body>
+
+  <div class="wrappers">
+    <div class="content">
+      <header>Consenti i Cookie</header>
+      <p>Questo sito web usa i cookie per migliorare la tua esperienza.</p>
+      <div class="buttons">
+        <button class="item">Accetto i Cookie</button>
+        <a href="#nascosto" class="item item2">Nascondi</a>
+      </div>
+    </div>
+  </div>
+  <script>
+    const cookieBox = document.querySelector(".wrappers"),
+      acceptBtn = cookieBox.querySelector("button");
+    var icon = document.querySelector(".item2").addEventListener("click", function () {
+      cookieBox.classList.add("hide")
+    })
+    acceptBtn.onclick = () => {
+      document.cookie = "cookie=accettato; max-age=" + 60 * 60 * 24 * 30;
+      if (document.cookie) {
+        cookieBox.classList.add("hide");
+      } else {
+        alert("I cookie non possono essere impostati! Sblocca questo sito dalle impostazioni del tuo browser..");
+      }
+    }
+    let checkCookie = document.cookie.indexOf("cookie=accettato");
+    checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
+  </script>
+
+  <div class="circle"></div>
+
+  <div class="img-bg" data-speed="-5" class="layer"></div>
+
+  <nav class="nav">
+    <ul>
+      <li><a href="https://zelden.repl.co" class="active" title="Torna alla pagina principale">Home</a></li>
+      <li><a href="https://zelden.repl.co/comandi" title="Visualizza tutti i comandi di Zelden">Comandi</a></li>
+      <li>
+        <div class="dropdown1">
+          <a href="#" class="dropbtn1">Altro</a>
+          <div class="dropdown-content1">
+            <a href="https://zelden.repl.co/changelog"
+              title="Visualizza la changelog di Zelden Bot e del Sito">Changelog</a>
+            <a onclick="PopupCenter(&#39;mailTo:zeldenbot@gmail.com &#39;, &#39;DESCRIZIONE.&#39;, 550, 666)"
+              target="_blank" title="Contattami tramite e-mail">Contattami</a>
+            <a href="" data-toggle="modal" data-target="#exampleModalCenter"
+              title="Apri un pop-up con i miei social">Socials</a>
+          </div>
+        </div>
+      </li>
+
+
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-solid fa-bars"></i></button>
+        <div class="dropdown-content">
+          <a href="https://zelden.repl.co" title="Torna alla pagina principale">Home</a>
+          <a href="https://zelden.repl.co/comandi" title="Visualizza tutti i comandi di Zelden">Comandi</a>
+          <a href="https://zelden.repl.co/changelog"
+            title="Visualizza la changelog di Zelden Bot e del Sito">Changelog</a>
+          <a onclick="PopupCenter(&#39;mailTo:zeldenbot@gmail.com &#39;, &#39;DESCRIZIONE.&#39;, 550, 666)"
+            target="_blank" title="Contattami tramite e-mail">Contattami</a>
+          <a href="" data-toggle="modal" data-target="#exampleModalCenter"
+            title="Apri un pop-up con i miei social">Socials</a>
+        </div>
+      </div>
+
+
+    </ul>
+    <div class="imgandtheme" style="display: flex; align-items: center;">
+      <a href="#main"><img
+          src="https://cdn.discordapp.com/attachments/1065323447577747557/1096936706571239486/image-a3.png" alt=""></a>
+      <img src="https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/75176/sun-icon-clipart-md.png" id="icon"
+        style="width: 35px; height: 35px;" alt="">
+    </div>
+  </nav>
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">I miei social</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="">
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Qui sotto avrai tutti i bottoni per visualizzare tutti i miei social, se hai bisogno, scrivimi!</p>
+          <hr class="my-2" style="background-color: white;">
+          <div class="socials">
+            <a href="https://discord.gg/apbCuupq2B" target="_blank" title="Supporto Discord"><i class="fab fa-discord"
+                style="font-size: 19px; margin-left: 10px;"></i></a>
+            <a href="https://www.tiktok.com/@goldyreal1?_t=8abfmbe54zD&_r=1" target="_blank" title="Profilo TikTok"><i
+                class="fab fa-tiktok" style="font-size: 19px; margin-left: 10px;"></i></a>
+            <a href=""></a><a href="https://youtube.com/@GoldyReal" target="_blank" title="Profilo YouTube"><i
+                class="fab fa-youtube" style="font-size: 19px; margin-left: 10px;"></i></a>
+            <a href="mailTo:zeldenbot@gmail.com" title="Supporto via e-mail"><i class="fas fa-solid fa-envelope"
+                style="font-size: 19px; margin-left: 10px;"></i></a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal"><a
+              onclick="PopupCenter(&#39;https://discord.com/api/oauth2/authorize?client_id=1062541276119044106&permissions=8&scope=bot%20applications.commands &#39;, &#39;DESCRIZIONE.&#39;, 550, 666)"
+              target="_blank" class="duebottoni"><i class="fas fa-solid fa-plus"></i> Invitami</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main" id="main">
+    <img class="immaginee"
+      src="https://cdn.discordapp.com/attachments/1065323447577747557/1096936706571239486/image-a3.png" alt="">
+    <div class="content">
+      <div class="testo">
+        <h1 class="text-main">Zelden</h1>
+        <p class="p-main">Un semplice Bot Discord che ti aiuterà a <span class="badge badge-secondary">moderare e ad
+            intrattenere</span> il tuo server.</p>
+      </div>
+      <div class="bottoni">
+        <button
+          onclick="PopupCenter(&#39;https://discord.com/api/oauth2/authorize?client_id=1062541276119044106&permissions=8&scope=bot%20applications.commands &#39;, &#39;Invita Zelden al tuo server discord.&#39;, 550, 666)"
+          target="_blank" class="duebottoni invita">
+          <i class="fas fa-solid fa-plus"></i> Invitami</button>
+        <button
+          onclick="PopupCenter(&#39;https://top.gg/bot/1062541276119044106/vote &#39;, &#39;Invita Zelden al tuo server discord.&#39;, 550, 666)"
+          target="_blank" class="duebottoni">
+          <i class="fab fa-discord"></i> Votami su Top.gg</button>
+        <button onclick="PopupCenter(&#39;https://discord.gg/apbCuupq2B &#39;, &#39;DESCRIZIONE.&#39;, 550, 666)"
+          target="_blank" class="duebottoni2">
+          <i class="fas fa-solid fa-envelope"></i> Server di supporto</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrapper">
+    <div class="parent-tab" id="pt1">
+      <input type="checkbox" name="tab" id="tab-1">
+      <label for="tab-1">
+        <span>Facile e veloce</span>
+        <div class="icon"><i class="fas fa-plus"></i></div>
+      </label>
+      <div class="content">
+        <p>Zelden è semplice, grazie ai suoi comandi intuitivi e al suo comando /helpcommands. Il mio scopo e quello
+          di far
+          diventare Zelden, il più user-friendly possibile. Se stai cercando un bot che faccia qualsiasi cosa, Zelden è
+          la
+          scelta migliore.</p>
+      </div>
+    </div>
+    <div class="parent-tab" id="pt2">
+      <input type="checkbox" name="tab" id="tab-2">
+      <label for="tab-2">
+        <span>Perché scegliere Zelden?</span>
+        <div class="icon"><i class="fas fa-plus"></i></div>
+      </label>
+      <div class="content">
+        <p>Zelden è pieno di funzionalità, ha più di 120 comandi e sono in continua aggiunta, è un bot verificato,
+          salva tutte le informazioni che prende dai comandi per mantenerle sicure nel tuo server ed
+          è semplice ed intuitivo grazie alla sua interfaccia che è pensata proprio per i meno esperti nell'utilizzo.
+        </p>
+      </div>
+    </div>
+    <div class="parent-tab" id="pt3">
+      <input type="checkbox" name="tab" id="tab-3">
+      <label for="tab-3">
+        <span>Comandi più utili e unici?</span>
+        <div class="icon"><i class="fas fa-plus"></i></div>
+      </label>
+      <div class="content">
+        <p>Zelden ha tantissimi comandi utili, come il sistema di livellamento, di warn, messaggi di benvenuto
+          personalizzati, integrazione a ChatGPT gratuita, sistema di Ticket, o comandi unici come più di 20 comandi
+          divertimento, sistema di economia e altro!</p>
+      </div>
+    </div>
+    <div class="parent-tab" id="pt4">
+      <input type="checkbox" name="tab" id="tab-4">
+      <label for="tab-4">
+        <span>Chi è lo sviluppatore?</span>
+        <div class="icon"><i class="fas fa-plus"></i></div>
+      </label>
+      <div class="content">
+        <p>Lo sviluppatore di Zelden è <a href="https://discord.com/users/818206141263380521" target="_blank"><span
+              class="badge badge-secondary">Goldy</span></a>, un ragazzo di 15 anni che frequenta la scuola informatica,
+          nato a Catania in Sicilia e programmatore da più di 2 anni. Oltre ad essere un programmatore è anche
+          appassionato ai videogiochi, in passato ha avuto un canale YouTube che ha raggiunto i 1800 iscritti, ma poi
+          decise di abbandonarlo per inseguire un suo sogno più grande.</p>
+      </div>
+    </div>
+  </div>
+
+  <!--   <div class="container">
+    <div class="topgg">
+      <h1>Vota Zelden su <span class="badge badge-secondary">top.gg</span> </h1>
+            <a href="https://top.gg/bot/1062541276119044106" target="_blank">
+        <img src="https://top.gg/api/widget/1062541276119044106.svg">
+      </a>
+    </div>
+  </div> -->
+
+  <div class="tante-card">
+    <div class="carta" id="card1">
+      <div class="content">
+        <h1><b>Comando /helpcommands</b></h1>
+        <img src="./img/help.png" class="box" alt="">
+        <p>Vuoi scoprire tutti i comandi di Zelden direttamente dal tuo Server Discord? Ecco qui che viene in tuo
+          soccorso il comando <span class="badge badge-secondary">/helpcommands</span>, ti mostra tutti i comandi di
+          Zelden e la loro descrizione, che puoi eseguire scrivendoli nella chat o cliccandoci sopra.<br>Il comando
+          /helpcommands è stato creato apposta per i meno esperti nell'utilizzo, infatti, grazie alla sua grafica
+          intuitiva, tutti riescono ad utilizzare Zelden!</p>
+      </div>
+      <a onclick="PopupCenter(&#39;https://discord.com/api/oauth2/authorize?client_id=1062541276119044106&permissions=8&scope=bot%20applications.commands &#39;, &#39;Invita Zelden al tuo server discord.&#39;, 550, 666)"
+        target="_blank" class="duebottoni invita">
+        Aggiungi a Discord</a>
+    </div>
+    <div class="carta" id="card2">
+      <div class="content">
+        <h1><b>Assistenza tramite Ticket</b></h1>
+        <img src="./img/ticket.png" class="box" alt="">
+        <p>Dai la possibilità ai tuoi membri di chiedere aiuto in caso di difficoltà, richieste, problemi e qualsiasi
+          altra cosa! Sì, perché Zelden ha un sistema di assistenza tramite Ticket completamente
+          personalizzabile.<br>Attivalo adesso eseguendo il comando <span class="badge badge-secondary">/setup
+            ticket</span> nel tuo Server Discord!<br>Disattiva il sistema di Ticket eseguendo il comando <span
+            class="badge badge-secondary">/disable tickets.</span></p>
+      </div>
+      <a onclick="PopupCenter(&#39;https://discord.com/api/oauth2/authorize?client_id=1062541276119044106&permissions=8&scope=bot%20applications.commands &#39;, &#39;Invita Zelden al tuo server discord.&#39;, 550, 666)"
+        target="_blank" class="duebottoni invita">
+        Aggiungi a Discord</a>
+    </div>
+    <div class="carta" id="card3">
+      <div class="content">
+        <h1><b>Sistema di livellamento</b></h1>
+        <img src="./img/rank.png" class="box" alt="">
+        <p>Hai tanti membri nel tuo Server Discord ma nessuno è attivo? Usa il sistema di livellamento di Zelden e dai
+          ricompense a chi supera un certo livello! Zelden ha un vasto database dove conservare tutti i livelli che
+          faranno i tuoi membri.<br>Controlla il tuo livello utilizzando il comando <span
+            class="badge badge-secondary">/rank</span>!</p>
+      </div>
+      <a onclick="PopupCenter(&#39;https://discord.com/api/oauth2/authorize?client_id=1062541276119044106&permissions=8&scope=bot%20applications.commands &#39;, &#39;Invita Zelden al tuo server discord.&#39;, 550, 666)"
+        target="_blank" class="duebottoni invita">
+        Aggiungi a Discord</a>
+    </div>
+    <div class="carta" id="card4">
+      <div class="content">
+        <h1><b>Messaggi di benvenuto automatici</b></h1>
+        <img src="./img/welcome.png" class="box" alt="">
+        <p>Dai un caldo e dolce benvenuto ai nuovi membri che entrano nel tuo Server con la funzionalità dei messaggi di
+          benvenuto automatici completamente personalizzabile. Attiva adesso il sistema di benvenuto eseguendo il
+          comando <span class="badge badge-secondary">/setup welcome</span> e scegliendo un canale dove inviare i
+          messaggi di benvenuto.<br>Disattiva il sistema di benvenuto eseguendo il comando <span
+            class="badge badge-secondary">/disable welcome</span>.</p>
+      </div>
+      <a onclick="PopupCenter(&#39;https://discord.com/api/oauth2/authorize?client_id=1062541276119044106&permissions=8&scope=bot%20applications.commands &#39;, &#39;Invita Zelden al tuo server discord.&#39;, 550, 666)"
+        target="_blank" class="duebottoni invita">
+        Aggiungi a Discord</a>
+    </div>
+    <div class="carta" id="card5">
+      <div class="content">
+        <h1><b>Sistema di Giveaway</b></h1>
+        <img src="./img/giveaway.png" class="box" alt="">
+        <p>Mantieni attivo il tuo Server Discord creando dei Giveaway, dai la possibilità di guadagnare qualcosa tramite
+          essi! Crea ora un Giveaway tramite il comando <span class="badge badge-secondary">/giveaway start</span>, per
+          visualizzare tutti i comandi, esegui il comando /helpcommands e recati nella pagina dei Giveaway.</p>
+      </div>
+      <a onclick="PopupCenter(&#39;https://discord.com/api/oauth2/authorize?client_id=1062541276119044106&permissions=8&scope=bot%20applications.commands &#39;, &#39;Invita Zelden al tuo server discord.&#39;, 550, 666)"
+        target="_blank" class="duebottoni invita">
+        Aggiungi a Discord</a>
+    </div>
+    <div class="carta" id="card6">
+      <div class="content">
+        <h1><b>Sistema di Verifica Captcha</b></h1>
+        <img src="./img/verify.png" class="box" alt="">
+        <p>Metti in sicurezza ora il tuo Server Discord tramite la verifica Captcha di Zelden, è semplice, veloce ed
+          intuitiva. Attivala ora eseguendo il comando <span class="badge badge-secondary">/setup verify</span>, Zelden
+          invierà un messaggio con un bottone che se cliccato, invierà un messaggio in privato con il
+          Captcha!<br>Disattiva il sistema di Ticket eseguendo il comando <span class="badge badge-secondary">/disable
+            verify</span>.</p>
+      </div>
+      <a onclick="PopupCenter(&#39;https://discord.com/api/oauth2/authorize?client_id=1062541276119044106&permissions=8&scope=bot%20applications.commands &#39;, &#39;Invita Zelden al tuo server discord.&#39;, 550, 666)"
+        target="_blank" class="duebottoni invita">
+        Aggiungi a Discord</a>
+    </div>
+    <div class="carta" id="card7">
+      <div class="content">
+        <h1><b>Auto Moderazione</b></h1>
+        <img src="./img/automod.png" class="box" alt="">
+        <p>Zelden ha centinaia di funzionalità, una tra queste è <span class="badge badge-secondary">l'auto
+            moderazione</span>. L'auto moderazione è un sistema che ha creato Discord per auto moderare i propri server,
+          per impedire ai membri di violare le regole del vostro server. Aggiungi Zelden al tuo Server Discord e esegui
+          il comando <span class="badge badge-secondary">/automod "regola"</span> per impostare l'auto moderazione!</p>
+      </div>
+      <a onclick="PopupCenter(&#39;https://discord.com/api/oauth2/authorize?client_id=1062541276119044106&permissions=8&scope=bot%20applications.commands &#39;, &#39;Invita Zelden al tuo server discord.&#39;, 550, 666)"
+        target="_blank" class="duebottoni invita">
+        Aggiungi a Discord</a>
+    </div>
+  </div>
+
+  <div class="wrappera">
+    <div class="container" id="nume1">
+      <i class="fas fa-server"></i>
+      <span class="num" data-val="115">000</span>
+      <span class="text">Server</span>
+    </div>
+    <div class="container" id="nume2">
+      <i class="fas fa-smile-beam"></i>
+      <span class="num" data-val="18200">000</span>
+      <span class="text">Membri</span>
+    </div>
+    <div class="container" id="nume3">
+      <i class="fas fa-terminal"></i>
+      <span class="num" data-val="120">000</span>
+      <span class="text">Comandi</span>
+    </div>
+  </div>
+
+  <div class="quasiultimo">
+    <img src="img/stelle.png" alt="" class="stelle">
+    <h1 class="qu-tt">Scopri molto altro ancora di Zelden aggiungendolo al tuo Server!</h1>
+    <div class="bottoni">
+      <button
+        onclick="PopupCenter(&#39;https://discord.com/api/oauth2/authorize?client_id=1062541276119044106&permissions=8&scope=bot%20applications.commands &#39;, &#39;Invita Zelden al tuo server discord.&#39;, 550, 666)"
+        target="_blank" class="duebottoni"><i class="fas fa-solid fa-plus"></i> Invitami</button><button
+        onclick="PopupCenter(&#39;https://discord.gg/apbCuupq2B &#39;, &#39;Entra nel Discord di support.&#39;, 550, 666)"
+        target="_blank" class="duebottoni2"><i class="fas fa-solid fa-envelope"></i> Server di Supporto</button>
+    </div>
+  </div>
+
+  <footer class="text-center text-lg-start text-muted" style="z-index: 998;">
+    <section class="">
+      <div class="container text-center text-md-start mt-5">
+        <div class="row mt-3">
+          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              <i class="fas fa-robot"></i> Zelden Bot
+            </h6>
+            <p>
+              Modera, intrattieni e migliora il tuo server in modo semplice grazie a Zelden. Aggiungilo ora cliccando su
+              uno dei tasti sul sito!
+            </p>
+            <p>
+              <a onclick="PopupCenter(&#39;https://discord.com/api/oauth2/authorize?client_id=1062541276119044106&permissions=8&scope=bot%20applications.commands &#39;, &#39;Invita Zelden al tuo server discord.&#39;, 550, 666)"
+                target="_blank" class="text-reset">Invitalo!</a>
+            </p>
+          </div>
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Pagine
+            </h6>
+            <p>
+              <a href="https://zelden.repl.co/" class="text-reset">Home</a>
+            </p>
+            <p>
+              <a href="https://zelden.repl.co/comandi" class="text-reset">Comandi</a>
+            </p>
+            <p>
+              <a href="https://zelden.repl.co/changelog" class="text-reset">Changelog</a>
+            </p>
+            <p>
+              <a href="https://zelden.betteruptime.com" target="_blank" class="text-reset">Status</a>
+            </p>
+          </div>
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">
+              Legali
+            </h6>
+            <p>
+              <a href="https://zelden.repl.co/tec" class="text-reset">Termini e condizioni</a>
+            </p>
+            <p>
+              <a href="https://zelden.repl.co/privacy" class="text-reset">Privacy Policy</a>
+            </p>
+          </div>
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p>
+              <a onclick="PopupCenter(&#39;mailTo:zeldenbot@gmail.com &#39;, &#39;DESCRIZIONE.&#39;, 550, 666)"
+                class="text-reset">Supporto Email</a>
+            </p>
+            <p>
+              <a onclick="PopupCenter(&#39;https://discord.gg/apbCuupq2B &#39;, &#39;DESCRIZIONE.&#39;, 550, 666)"
+                class="text-reset">Supporto Discord</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2023 Copyright:
+      <a class="text-reset fw-bold" href="https://zelden.repl.co/">zelden.repl.co</a>
+    </div>
+  </footer>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="js/cookie.js"></script>
+<script src="js/script.js"></script>
+
+</html>
